@@ -16,7 +16,7 @@ Create an instance of encrypter, `secret` could be a `string` or an `array` of s
 
 ### Options
 
-- `ttl` - enable support for [TTL](http://en.wikipedia.org/wiki/Time_to_live) of the encoded data, after its' expiration you won't be able to decrypt string, default `false`.
+- `ttl` - enable support for [TTL](http://en.wikipedia.org/wiki/Time_to_live) of the encoded data, after its' expiration you won't be able to decrypt a string, default `false`.
 
 It returns 2 methods that will do the main thing encryption/decryption of an object.
 
