@@ -1,10 +1,10 @@
 {
   "name": "object-encrypter",
-  "version": "0.0.0",
-  "description": "Encrypt/decrypt javascript objects as string with TTL",
+  "version": "0.1.0",
+  "description": "Encrypt/decrypt javascript objects as strings with TTL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha ./test/"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/voronianski/node-object-encrypter/issues"
   },
-  "homepage": "https://github.com/voronianski/node-object-encrypter"
+  "homepage": "https://github.com/voronianski/node-object-encrypter",
+  "dependencies": {
+    "base64-url": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
+  }
 }
