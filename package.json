@@ -1,0 +1,29 @@
+{
+  "name": "object-encrypter",
+  "version": "0.0.0",
+  "description": "Encrypt/decrypt javascript objects as string with TTL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voronianski/node-object-encrypter"
+  },
+  "keywords": [
+    "base64",
+    "encrypt",
+    "decrypt",
+    "object",
+    "array",
+    "json",
+    "string",
+    "ttl"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voronianski/node-object-encrypter/issues"
+  },
+  "homepage": "https://github.com/voronianski/node-object-encrypter"
+}
