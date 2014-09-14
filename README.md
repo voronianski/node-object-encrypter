@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm install luvit-logger
+npm install object-encrypter
 ```
 
 ## API
@@ -26,7 +26,7 @@ Returns [Base64](http://en.wikipedia.org/wiki/Base64) encoded string. `ttl` is `
 
 ### ``.decrypt(generatedString)``
 
-Returns original object value if no errors occured or time to live is not expired, in other cases returns `null`.
+Returns original object value if no errors occured (or time to live is not expired), in other cases returns `null`.
 
 ## Example
 
