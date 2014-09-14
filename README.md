@@ -12,7 +12,7 @@ npm install object-encrypter
 
 ### ``encrypter(secret, options)``
 
-Create an instance of encrypter, `secret` could be a `string` or an `array` of strings as well.
+Create an instance of encrypter, `secret` could be a `string` or an `array` of strings.
 
 ### Options
 
