@@ -2,7 +2,7 @@
 
 [![build status](http://img.shields.io/travis/voronianski/node-object-encrypter.svg?style=flat)](https://travis-ci.org/voronianski/node-object-encrypter)
 
-> Encrypt/decrypt Javascript objects as base64 strings with optional TTL support.
+> Encrypt/decrypt JavaScript objects as base64 strings with optional TTL support.
 
 ## Install
 
