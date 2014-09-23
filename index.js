@@ -1,4 +1,3 @@
-var base64 = require('base64-url');
 var crypto = require('crypto');
 
 function isObject (val) {
