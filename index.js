@@ -74,7 +74,11 @@ module.exports = function (secrets, options) {
 			obj = JSON.stringify(obj);
 			obj += '\n'+sign(obj);
 
-			return base64.encode(obj);
+			var cipher = crypto.createCipher('aes-256-cbc', secrets.join(''));
+			var crypted = cipher.update(obj, 'utf8', 'base64');
+			crypted += cipher.final('base64');
+
+			return crypted;
 		},
 
 		decrypt: function (str) {
@@ -82,7 +86,10 @@ module.exports = function (secrets, options) {
 				return null;
 			}
 
-			str = base64.decode(str);
+			var decipher = crypto.createDecipher('aes-256-cbc', secrets.join(''));
+			str = decipher.update(str, 'base64', 'utf8');
+			str += decipher.final('utf8');
+
 			var index =  str.indexOf('\n');
 
 			if (index === -1) {
