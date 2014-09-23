@@ -1,6 +1,6 @@
 {
   "name": "object-encrypter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encrypt/decrypt javascript objects as strings with TTL",
   "main": "index.js",
   "scripts": {
