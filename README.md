@@ -20,6 +20,8 @@ Create an instance of encrypter, `secret` could be a `string` or an `array` of s
 
 - `ttl` - enable support for [TTL](http://en.wikipedia.org/wiki/Time_to_live) of the encoded data, after its' expiration you won't be able to decrypt a string, default `false`.
 
+- `algorithm` - cipher algorithm that will be used to encrypt/decrypt data. You can check the list of available ciphers with [`crypto.getCiphers()`](http://nodejs.org/api/crypto.html#crypto_crypto_getciphers), default `aes-256-cbc`.
+
 It returns 2 methods that will do the main thing encryption/decryption of an object.
 
 ### ``.encrypt(object, [ttl])``
