@@ -56,7 +56,10 @@ function verifier (secrets) {
 
 module.exports = function (secrets, options) {
 	secrets = [].concat(secrets);
-	options = options || {ttl: false};
+
+	options = options || {};
+	options.ttl = options.ttl || false;
+	options.algorithm = options.algorithm || 'aes-256-cbc';
 
 	var sign = signer(secrets);
 	var verify = verifier(secrets);
@@ -74,7 +77,7 @@ module.exports = function (secrets, options) {
 			obj = JSON.stringify(obj);
 			obj += '\n'+sign(obj);
 
-			var cipher = crypto.createCipher('aes-256-cbc', secrets.join(''));
+			var cipher = crypto.createCipher(options.algorithm, secrets.join(''));
 			var crypted = cipher.update(obj, 'utf8', 'base64');
 			crypted += cipher.final('base64');
 
@@ -86,7 +89,7 @@ module.exports = function (secrets, options) {
 				return null;
 			}
 
-			var decipher = crypto.createDecipher('aes-256-cbc', secrets.join(''));
+			var decipher = crypto.createDecipher(options.algorithm, secrets.join(''));
 			str = decipher.update(str, 'base64', 'utf8');
 			str += decipher.final('utf8');
 
