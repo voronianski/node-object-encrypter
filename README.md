@@ -22,6 +22,8 @@ Create an instance of encrypter, `secret` could be a `string` or an `array` of s
 
 - `algorithm` - cipher algorithm that will be used to encrypt/decrypt data. You can check the list of available ciphers with [`crypto.getCiphers()`](http://nodejs.org/api/crypto.html#crypto_crypto_getciphers), default `aes-256-cbc`.
 
+- `outputEncoding` - option should be one of `'latin1'`, `'base64'` (default) or `'hex'`.
+
 It returns 2 methods that will do the main thing encryption/decryption of an object.
 
 ### ``.encrypt(object, [ttl])``
